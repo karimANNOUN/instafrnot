@@ -25,7 +25,7 @@ export const Posts = () => {
   
   const params = useParams()
 
-
+// eslint-disable-next-line  
   const handleOpen = () => {
     setOpen(true) ;
   };
