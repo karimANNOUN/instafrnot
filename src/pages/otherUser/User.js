@@ -102,7 +102,7 @@ export const User = () => {
            
             
 
-            if(open == true){
+            if(open === true){
             async function getPostUser () {
 
               try{
@@ -121,7 +121,7 @@ export const User = () => {
             getPostUser()
           }
 
-          if(openStories == true){
+          if(openStories === true){
             async function getStoryUser () {
 
               try{
@@ -138,7 +138,7 @@ export const User = () => {
             }
             getStoryUser()
           }
-        
+         // eslint-disable-next-line
           },[open,openStories])
 
 

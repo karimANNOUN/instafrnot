@@ -103,7 +103,7 @@ try{
     }
     getPostUser()
 
-    if(open == true){
+    if(open === true){
       async function getPostUser () {
 
 
@@ -144,7 +144,7 @@ try{
     }
     getStoriesUser()
 
-    if(openStories == true){
+    if(openStories === true){
     async function getStory () {
 
 
@@ -203,10 +203,10 @@ try{
   getBio()
 
 
- 
+  // eslint-disable-next-line
   },[open,openStories])
  // const storyUser= useSelector(state=>state.app.myStories)
-  const myPosts= useSelector(state=>state.app.myPosts) 
+ 
   const bioJdid = useSelector(state=>state.app.newBio)
  // console.log(story)
   return (

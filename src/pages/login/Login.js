@@ -60,6 +60,7 @@ useEffect(()=>{
   }if(isAuth === false) {
     navigate('/login')
   } 
+   // eslint-disable-next-line
 },[isAuth])
 
 

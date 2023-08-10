@@ -121,6 +121,7 @@ export const AddComment = ({post}) => {
         setLike(false)
     }  
     }
+     // eslint-disable-next-line
   },[userPosts])
 
 

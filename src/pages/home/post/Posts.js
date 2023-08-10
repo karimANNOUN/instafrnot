@@ -61,7 +61,7 @@ export const Posts = () => {
 
        
    
-    if(open == true){
+    if(open === true){
       async function getStoryId(){
         try{
           await axios.get(`${process.env.REACT_APP_HOST}/getstory/${params.id}/${params.storiesId}`,{ 
@@ -79,7 +79,7 @@ export const Posts = () => {
        
 
     
-           
+   // eslint-disable-next-line      
       },[open])
     
       
