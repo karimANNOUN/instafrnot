@@ -21,7 +21,7 @@ export const Posts = () => {
  
   const [open, setOpen] = React.useState(false);
   const [story,setStory]=useState({})
- // const [photoJdid,setPhotoJdid]=useState([])
+
   
   const params = useParams()
 
