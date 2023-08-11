@@ -33,7 +33,7 @@ export const DeleteStories = ({anchorEl ,setAnchorEl ,ouvrier ,story ,setOpen })
          
       
            navigate('/')
-      // console.log(await response.json())
+   
      
        
      
