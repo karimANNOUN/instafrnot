@@ -22,7 +22,7 @@ export const BoxLikes = ({openLikes,setOpenLikes,pos}) => {
         justifyContent:'flexstart',
         flexDirection:'column',
         overflow:'auto'
-      //  alignItems:'center'
+
     
       };
   return (
