@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Box } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { setAuthUser, setIsAuth } from '../../store/cartSlice';
 
 
 
@@ -11,7 +13,7 @@ export const Register = () => {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const navigate = useNavigate()
-   
+   const dispatch=useDispatch
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -30,6 +32,7 @@ export const Register = () => {
 try{
   const response = await fetch(`${process.env.REACT_APP_HOST}/register`,{
         method: 'POST',
+        credentials:"include",
         headers: {
           'Content-Type': 'application/json',
         },
@@ -37,10 +40,10 @@ try{
        
       });
       if(response.status === 200){
-      //  dispatch(setIsAuth(true))
-         await response.json()
-     //   dispatch(setAuthUser(data.user))
-      navigate("/login")
+        dispatch(setIsAuth(true))
+      const data =   await response.json()
+        dispatch(setAuthUser(data.user))
+      navigate("/")
      
      
       }
@@ -66,7 +69,7 @@ try{
   return (
     <Box sx={{ display:"flex" , justifyContent:"center" , mx:2 , alignItems:"center" , minHeight:"100vh"}}>
      
-     <form onSubmit={handleSubmit}>
+     <form >
       <TextField
         label="Name"
         value={name}
@@ -93,7 +96,7 @@ try{
         margin="normal"
         variant="outlined"
       />
-      <Button type="submit" variant="contained" color="primary">
+      <Button onClick={handleSubmit} type="submit" variant="contained" color="primary">
         Register
       </Button>
       <Button sx={{ml:2}} onClick={handleClick} variant="contained" color="primary">
