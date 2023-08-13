@@ -21,7 +21,7 @@ try{
 const data = await response.json();
 
 
-if ( data !== undefined ) {
+if ( response.status === 200 ) {
   dispatch(setAuthUser(data))
   dispatch(setIsAuth(true))   
  
