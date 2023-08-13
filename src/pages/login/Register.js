@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Box } from '@mui/material';
-import { useSelector,useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setAuthUser, setIsAuth } from '../../store/cartSlice';
 
 
@@ -15,7 +15,7 @@ export const Register = () => {
     const [email, setEmail] = useState('');
     const navigate = useNavigate()
    
-
+const dispatch=useDispatch()
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
       };
@@ -43,6 +43,7 @@ try{
       if(response.status === 200){
     
       data = await response.json()
+
       dispatch(setIsAuth(true))
       dispatch(setAuthUser(data.user))
      navigate('/')
