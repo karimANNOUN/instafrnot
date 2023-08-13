@@ -57,7 +57,7 @@ try{
      
       // Perform login logic here
       
-      // Reset form fields
+      
       setName('');
       setPassword('');
       setEmail('');
