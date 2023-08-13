@@ -87,7 +87,7 @@ export const Posts = () => {
       
      
    
-   // eslint-disable-next-line    
+   
 
     const settings = {
       dots: false,
