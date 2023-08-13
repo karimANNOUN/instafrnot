@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Box } from '@mui/material';
 import { useSelector,useDispatch } from 'react-redux';
+import { setAuthUser, setIsAuth } from '../../store/cartSlice';
 
 
 
