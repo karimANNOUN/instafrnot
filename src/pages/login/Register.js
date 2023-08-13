@@ -59,7 +59,7 @@ try{
       setPassword('');
       setEmail('');
     };
-
+ 
     const handleClick=()=>{
       navigate('/login')
     }

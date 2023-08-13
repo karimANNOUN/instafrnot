@@ -12,7 +12,7 @@ import { Avatar } from '@mui/material';
 export const BoxComments = ({openComments,setOpenComments,pos}) => {
 
   const navigate=useNavigate()
-   // const [coments,setComents]=useState([])
+  
     const handleClose = () =>{
       setOpenComments(false);
       navigate('/')
