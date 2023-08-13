@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Box } from '@mui/material';
-
+import { useSelector,useDispatch } from 'react-redux';
 
 
 
@@ -41,9 +41,11 @@ try{
       });
       if(response.status === 200){
     
-      await response.json()
-       
-      navigate("/login")
+      data = await response.json()
+      dispatch(setIsAuth(true))
+      dispatch(setAuthUser(data.user))
+     navigate('/')
+      
      
      
       }
