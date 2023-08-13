@@ -30,7 +30,7 @@ useEffect(()=>{
  // eslint-disable-next-line
 },[])
 
- // eslint-disable-next-line
+
 const notifications = useSelector(state=> state.app.notifications)
 
 
