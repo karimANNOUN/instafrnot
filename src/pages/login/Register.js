@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextField, Button, Box } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { setIsAuth } from '../../store/cartSlice';
+import { setAuthUser, setIsAuth } from '../../store/cartSlice';
 
 
 
@@ -42,8 +42,8 @@ try{
       });
       if(response.status === 200){
     
-     await response.json()
-
+    const data = await response.json()
+       dispatch(setAuthUser(data.user))
       dispatch(setIsAuth(true))
      navigate('/')
       

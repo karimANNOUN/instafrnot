@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 
 import { useSelector,useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import {  setIsAuth } from '../../store/cartSlice';
+import {  setAuthUser, setIsAuth } from '../../store/cartSlice';
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -35,8 +35,9 @@ export const Login = () => {
         body: JSON.stringify({ email , password }),
        
       });
-       await response.json();
+      const data = await response.json();
       if(response.status === 200){
+        dispatch(setAuthUser(data.user))
         dispatch(setIsAuth(true))
        navigate('/')
       }else{
