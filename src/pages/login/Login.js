@@ -35,7 +35,7 @@ export const Login = () => {
         body: JSON.stringify({ email , password }),
        
       });
-       const data = await response.json();
+       await response.json();
       if(response.status === 200){
         dispatch(setIsAuth(true))
        navigate('/')
