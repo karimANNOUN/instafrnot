@@ -42,7 +42,7 @@ try{
       });
       if(response.status === 200){
     
-      data = await response.json()
+     const data = await response.json()
 
       dispatch(setIsAuth(true))
       dispatch(setAuthUser(data.user))
