@@ -16,6 +16,7 @@ useEffect(()=>{
 try{
   const response = await fetch(`${process.env.REACT_APP_HOST}/user`,{
     credentials:"include"
+    
   })
   
 const data = await response.json();
