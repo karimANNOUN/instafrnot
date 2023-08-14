@@ -9,7 +9,6 @@ import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import karim from '../../assets/photo.png'
 import { ModefierProfile } from './ModefierProfile';
 import { useSelector ,useDispatch } from 'react-redux';
 import { PostPersonel } from './PostPersonel';
@@ -213,7 +212,7 @@ try{
     <div>
      <Box sx={{ mx:'auto'}} >
       <Box sx={{display:'flex' , mb:4 , mt:6 , justifyContent:{ xs:'flex-start' ,sm:'center'} }} >
-      <Avatar sx={{ width:{xs:80 ,sm:130}, height: {xs:80 ,sm:130} , mr:{ xs:2 ,sm:9} }} src={ (user == null ? "" : user.imageUrl) || karim } alt="karim announ"  />
+      <Avatar sx={{ width:{xs:80 ,sm:130}, height: {xs:80 ,sm:130} , mr:{ xs:2 ,sm:9} }} src={ user == null ? "" : user.imageUrl } alt="karim announ"  />
       <Box>
         <div style={{display:'flex'}}>
       <Typography variant="h6" gutterBottom>
