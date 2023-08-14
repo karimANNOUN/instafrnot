@@ -139,7 +139,7 @@ export const User = () => {
             getStoryUser()
           }
          // eslint-disable-next-line
-          },[open,openStories])
+          },[open,openStories,params.id])
 
 
           const userPosts = useSelector(state=> state.app.userPosts)
